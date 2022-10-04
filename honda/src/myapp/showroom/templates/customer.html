@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block desc %}
+<center>
+    <div style="font-family:Calibri; padding: 10px; ">
+        <h1>{{title}}</h1>
+            {% for msg in messages %}
+                {{msg}}
+    
+            {% endfor %}
+    </div>
+    <div style="padding: 20px; width: fit-content; border-style:groove; font-family:Calibri;" >
+        <form method="post" action="."> {% csrf_token %}
+            {{form.as_p}}
+            <button style=" width:80px; height: 25px;" type="submit" name="btnsubmit">ADD</button>
+
+
+
+        </form>
+    </div>
+    <div style="padding:20px">
+        <a href="../book-cust/"><button style="width: 280px;height: 50px;font-size: larger; font-family: Calibri;" type="submit" name="btnsubmit">Click here to book Vehicle</button></a>
+        <a href="../home/"><button style="width: 280px;height: 50px;font-size: larger; font-family: Calibri;" type="submit" name="btnsubmit">Go back to Home</button></a>
+
+
+    </div>
+</center>
+
+
+{% endblock %}

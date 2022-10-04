@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block desc %}
+<div style="font-family: Calibri">
+    {% for obj in object_list %}
+        <h2><li> Stock id : {{obj.stockid}} <br>
+            Stock : {{ obj.stock }} | Vehicle Number : {{ obj.VehicleNum }} </a></li></h2>
+    
+    
+        {% endfor %}
+    <a href="../staff/"><button style="width: 280px;height: 50px;font-size: larger; font-family: Calibri;" type="submit" name="btnsubmit">Click here to go back</button></a>
+
+</div>
+{% endblock %}

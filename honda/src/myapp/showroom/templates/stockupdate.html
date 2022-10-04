@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block desc %}
+<center><div style="padding: 20px; width: fit-content; border-style:groove; font-family:Calibri;">
+    <h1>{{title}}</h1>
+    {% for msg in messages %}
+                {{msg}}
+    
+    {% endfor %}
+    <form method="post" action="."> {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" name="btnsubmit">Update</button>
+
+
+
+
+    </form>
+
+</div>
+<div style="padding: 20px">
+    <a href="../../view-admin-stock/"><button style="width: 280px;height: 50px;font-size: larger; font-family: Calibri;" type="submit" name="btnsubmit">Go back</button></a>
+
+
+</div>
+</center>
+
+{% endblock %}
